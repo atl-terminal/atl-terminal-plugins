@@ -1,0 +1,16 @@
+{
+  "read_only": [
+    "pwd",
+    "find . -maxdepth 2 -type f | head -100",
+    "rg --files | head -100",
+    "rg -n \"PATTERN\" . | head -100"
+  ],
+  "fallbacks": [
+    "grep -RInI PATTERN . | head -100"
+  ],
+  "notes": [
+    "Prefer read-only inspection commands first.",
+    "Use rg when available, with grep fallback.",
+    "Avoid huge recursive output; cap result size."
+  ]
+}

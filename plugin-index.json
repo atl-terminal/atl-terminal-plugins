@@ -1,0 +1,29 @@
+{
+  "api_version": "1.0",
+  "plugins": [
+    {
+      "id": "atl.device.linux",
+      "path": "plugins/devices/linux-server/plugin.json"
+    },
+    {
+      "id": "atl.device.cisco_ios",
+      "path": "plugins/devices/cisco-ios/plugin.json"
+    },
+    {
+      "id": "atl.tool.nmap",
+      "path": "plugins/tools/nmap/plugin.json"
+    },
+    {
+      "id": "atl.tui.nano",
+      "path": "plugins/tui/nano/plugin.json"
+    },
+    {
+      "id": "atl.tui.vim",
+      "path": "plugins/tui/vim/plugin.json"
+    },
+    {
+      "id": "atl.code.inspect",
+      "path": "plugins/code/inspect/plugin.json"
+    }
+  ]
+}

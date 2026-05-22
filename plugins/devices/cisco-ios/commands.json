@@ -1,0 +1,18 @@
+{
+  "read_only": [
+    "show version",
+    "show running-config | include hostname|version",
+    "show ip interface brief",
+    "show interfaces status",
+    "show ip route",
+    "show logging"
+  ],
+  "confirm_required": [
+    "configure terminal",
+    "write memory",
+    "reload",
+    "clear counters",
+    "shutdown",
+    "no shutdown"
+  ]
+}

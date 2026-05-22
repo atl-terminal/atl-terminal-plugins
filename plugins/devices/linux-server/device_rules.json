@@ -1,0 +1,16 @@
+{
+  "prompt_patterns": [
+    "^[A-Za-z0-9_.-]+@[A-Za-z0-9_.-]+:[^#$]*[#$] ?$",
+    "^[#$] ?$"
+  ],
+  "os_hints": [
+    "Linux",
+    "Ubuntu",
+    "Debian",
+    "CentOS",
+    "Rocky",
+    "AlmaLinux",
+    "Amazon Linux"
+  ],
+  "protocols": ["ssh", "local_shell"]
+}

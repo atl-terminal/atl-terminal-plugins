@@ -1,0 +1,23 @@
+{
+  "safe_actions": [
+    "VIM_APPEND",
+    "VIM_PREPEND",
+    "VIM_INSERT_AFTER",
+    "VIM_INSERT_BEFORE",
+    "VIM_REPLACE_LINE",
+    "VIM_REPLACE_BUFFER",
+    "VIM_DELETE",
+    "VIM_DELETE_BLANKS",
+    "VIM_SAVE",
+    "VIM_SAVE_AS",
+    "VIM_SAVE_QUIT",
+    "VIM_QUIT_FORCE",
+    "VIM_UNDO",
+    "VIM_REDO"
+  ],
+  "notes": [
+    "Prefer line-aware Vim actions over raw cursor movement.",
+    "Before line-number edits, inspect or infer the current buffer lines.",
+    "Avoid duplicate appends and repeated buffer replacement."
+  ]
+}

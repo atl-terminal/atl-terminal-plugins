@@ -1,0 +1,16 @@
+name: Validate plugins
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate plugin manifests
+        run: perl tools/validate_all.pl
+      - name: Run tests
+        run: perl t/validate_plugins.t

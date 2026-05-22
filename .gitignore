@@ -1,0 +1,16 @@
+*.bak
+*.tmp
+*.log
+*.zip
+*.exe
+*.msi
+*.dll
+*.so
+*.dylib
+blib/
+_build/
+cover_db/
+local/
+vendor/
+.DS_Store
+Thumbs.db

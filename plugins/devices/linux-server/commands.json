@@ -1,0 +1,24 @@
+{
+  "read_only": [
+    "hostnamectl",
+    "uname -a",
+    "uptime",
+    "free -h",
+    "df -hT",
+    "ip addr",
+    "ip route",
+    "ss -tulpn",
+    "systemctl --failed"
+  ],
+  "confirm_required": [
+    "systemctl restart",
+    "apt remove",
+    "yum remove",
+    "dnf remove",
+    "rm -rf",
+    "chmod -R",
+    "chown -R",
+    "iptables",
+    "nft"
+  ]
+}

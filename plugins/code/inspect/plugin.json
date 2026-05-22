@@ -1,0 +1,20 @@
+{
+  "id": "atl.code.inspect",
+  "name": "Code Inspect",
+  "type": "code",
+  "api_version": "1.0",
+  "version": "0.1.0",
+  "description": "Codebase inspection helper for terminal-driven project discovery, search, structure, and dependency checks.",
+  "logo": "logo.txt",
+  "entry": {
+    "commands": "commands.json",
+    "prompts": "prompts.md"
+  },
+  "supports": ["ssh", "local_shell"],
+  "permissions": ["read_terminal", "suggest_commands", "parse_output", "read_files"],
+  "safe_by_default": true,
+  "ui": {
+    "badge_bg": "#194469",
+    "badge_fg": "#ffffff"
+  }
+}

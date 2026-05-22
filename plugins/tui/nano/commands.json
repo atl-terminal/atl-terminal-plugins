@@ -1,0 +1,17 @@
+{
+  "safe_actions": [
+    "NANO_SAVE",
+    "NANO_SAVE_EXIT",
+    "NANO_EXIT",
+    "NANO_DISCARD_EXIT",
+    "NANO_CUT_LINE",
+    "NANO_PASTE",
+    "NANO_BACKSPACE",
+    "NANO_DELETE"
+  ],
+  "notes": [
+    "nano is modeless, so text inserts directly.",
+    "Wait for screen updates after save prompts.",
+    "Avoid repeating save or exit actions if the screen did not change."
+  ]
+}

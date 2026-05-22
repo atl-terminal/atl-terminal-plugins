@@ -1,0 +1,21 @@
+{
+  "id": "atl.device.linux",
+  "name": "Linux Server",
+  "type": "device",
+  "api_version": "1.0",
+  "version": "0.1.0",
+  "description": "Linux shell awareness, safe diagnostics, and service troubleshooting guidance.",
+  "logo": "logo.txt",
+  "entry": {
+    "device_rules": "device_rules.json",
+    "commands": "commands.json",
+    "prompts": "prompts.md"
+  },
+  "supports": ["ssh", "local_shell"],
+  "permissions": ["read_terminal", "suggest_commands", "parse_output"],
+  "safe_by_default": true,
+  "ui": {
+    "badge_bg": "#2d6a4f",
+    "badge_fg": "#ffffff"
+  }
+}

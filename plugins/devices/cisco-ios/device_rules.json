@@ -1,0 +1,8 @@
+{
+  "prompt_patterns": [
+    "^[A-Za-z0-9_.-]+[>#] ?$",
+    "^[A-Za-z0-9_.-]+\\(config[^)]*\\)# ?$"
+  ],
+  "os_hints": ["Cisco IOS", "Cisco IOS XE"],
+  "protocols": ["ssh", "telnet"]
+}

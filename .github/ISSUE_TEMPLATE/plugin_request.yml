@@ -1,0 +1,24 @@
+name: Plugin request
+description: Request a new ATL Terminal plugin
+title: "[Plugin]: "
+labels: ["plugin-request"]
+body:
+  - type: input
+    id: family
+    attributes:
+      label: Plugin family
+      placeholder: devices, tools, tui, or code
+    validations:
+      required: true
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use case
+      description: What should the plugin help with?
+    validations:
+      required: true
+  - type: textarea
+    id: safety
+    attributes:
+      label: Safety notes
+      description: Which actions should require confirmation?
