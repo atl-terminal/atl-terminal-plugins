@@ -1,0 +1,15 @@
+{
+  "read_only": [
+    "command -v git && command -v timeout",
+    "timeout 15s git --no-optional-locks --no-pager status --short --branch --untracked-files=no | head -c 32768",
+    "timeout 15s git --no-pager log -n 10 --format='%h %s' | head -c 16384",
+    "timeout 15s git --no-pager diff --no-ext-diff --no-textconv --stat | head -c 32768"
+  ],
+  "notes": [
+    "Require a confirmed repository path in a POSIX shell. Do not scan every directory to locate a repository.",
+    "--untracked-files=no intentionally omits untracked files; do not claim the worktree is completely clean from this snapshot.",
+    "Use --no-ext-diff and --no-textconv for content diffs so repository-configured external diff helpers are not invoked.",
+    "Do not print remote URLs, config credentials, .env files, or credential stores.",
+    "Never checkout, restore, reset, clean, rebase, commit, push, fetch, or run hooks/builds/tests merely to inspect code."
+  ]
+}

@@ -24,6 +24,18 @@
     {
       "id": "atl.code.inspect",
       "path": "plugins/code/inspect/plugin.json"
+    },
+    {
+      "id": "atl.tool.docker",
+      "path": "plugins/tools/docker/plugin.json"
+    },
+    {
+      "id": "atl.tool.systemd",
+      "path": "plugins/tools/systemd/plugin.json"
+    },
+    {
+      "id": "atl.tool.git",
+      "path": "plugins/tools/git/plugin.json"
     }
   ]
 }

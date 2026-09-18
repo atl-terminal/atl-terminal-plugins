@@ -3,7 +3,7 @@
   "name": "Cisco IOS / IOS XE",
   "type": "device",
   "api_version": "1.0",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Cisco IOS and IOS XE prompt detection, safe show commands, and troubleshooting guidance.",
   "logo": "logo.txt",
   "entry": {
@@ -11,11 +11,25 @@
     "commands": "commands.json",
     "prompts": "prompts.md"
   },
-  "supports": ["ssh", "telnet"],
-  "permissions": ["read_terminal", "suggest_commands", "parse_output"],
+  "supports": [
+    "ssh",
+    "telnet"
+  ],
+  "permissions": [
+    "read_terminal",
+    "suggest_commands",
+    "parse_output"
+  ],
   "safe_by_default": true,
   "ui": {
     "badge_bg": "#1d4f91",
     "badge_fg": "#ffffff"
-  }
+  },
+  "metadata": {
+    "activation_terms": [
+      "cisco",
+      "ios xe"
+    ]
+  },
+  "stability": "beta"
 }

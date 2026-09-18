@@ -1,16 +1,12 @@
 {
-  "read_only": [
-    "pwd",
-    "find . -maxdepth 2 -type f | head -100",
-    "rg --files | head -100",
-    "rg -n \"PATTERN\" . | head -100"
-  ],
-  "fallbacks": [
-    "grep -RInI PATTERN . | head -100"
+  "safe_actions": [
+    "CODE_OVERVIEW", "CODE_TREE", "CODE_LANGS", "CODE_TODOS",
+    "CODE_STRUCTURE", "CODE_FILE", "CODE_SEARCH", "CODE_SEARCH_REGEX"
   ],
   "notes": [
     "Prefer read-only inspection commands first.",
-    "Use rg when available, with grep fallback.",
-    "Avoid huge recursive output; cap result size."
+    "Use ripgrep when available, with a bounded core-Perl fallback for literal searches.",
+    "Limit time, file sizes, line length, output lines and output bytes.",
+    "File writes are separate file-actions helpers and require Free mode; this plugin remains read-only."
   ]
 }

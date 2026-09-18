@@ -1,0 +1,45 @@
+{
+  "id": "atl.tool.docker",
+  "name": "Docker Diagnostics",
+  "type": "tool",
+  "api_version": "1.0",
+  "version": "0.2.0",
+  "description": "Bounded, read-only Docker container discovery and troubleshooting guidance.",
+  "logo": "logo.txt",
+  "entry": {
+    "commands": "commands.json",
+    "prompts": "prompts.md"
+  },
+  "supports": [
+    "ssh",
+    "telnet"
+  ],
+  "permissions": [
+    "read_terminal",
+    "suggest_commands"
+  ],
+  "safe_by_default": true,
+  "stability": "beta",
+  "release_note": "Guidance integration requires the next ATL Terminal release after 1.0.7. Commands remain subject to the app's safety controls.",
+  "ui": {
+    "badge_bg": "#146c94",
+    "badge_fg": "#ffffff"
+  },
+  "metadata": {
+    "activation_terms": [
+      "docker",
+      "container",
+      "containers"
+    ],
+    "requires": [
+      "Linux/POSIX shell",
+      "timeout",
+      "head"
+    ],
+    "verification": "Automated selection and command smoke tests; not a guarantee of LLM or device behavior.",
+    "references": [
+      "https://docs.docker.com/reference/cli/docker/container/ls/",
+      "https://docs.docker.com/reference/cli/docker/container/logs/"
+    ]
+  }
+}

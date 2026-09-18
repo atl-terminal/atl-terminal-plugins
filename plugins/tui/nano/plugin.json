@@ -3,18 +3,32 @@
   "name": "GNU nano",
   "type": "tui",
   "api_version": "1.0",
-  "version": "0.1.0",
-  "description": "Interactive nano helper with safe save, exit, insert, and prompt-state guidance.",
+  "version": "0.2.0",
+  "description": "Nano guidance; automated save/exit remains unstable.",
   "logo": "logo.txt",
   "entry": {
     "commands": "commands.json",
     "prompts": "prompts.md"
   },
-  "supports": ["ssh", "telnet", "local_shell"],
-  "permissions": ["read_terminal", "suggest_commands", "parse_output"],
-  "safe_by_default": true,
+  "supports": [
+    "ssh",
+    "telnet"
+  ],
+  "permissions": [
+    "read_terminal",
+    "suggest_commands",
+    "parse_output"
+  ],
+  "safe_by_default": false,
   "ui": {
     "badge_bg": "#7a3e9d",
     "badge_fg": "#ffffff"
-  }
+  },
+  "metadata": {
+    "activation_terms": [
+      "nano"
+    ]
+  },
+  "stability": "unstable",
+  "release_note": "Prefer manual nano for production edits. Guidance does not make editor automation stable."
 }

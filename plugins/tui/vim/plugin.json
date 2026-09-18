@@ -3,18 +3,33 @@
   "name": "Vim",
   "type": "tui",
   "api_version": "1.0",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Interactive Vim helper with line-aware edit actions, Ex commands, save/quit, and replay guards.",
   "logo": "logo.txt",
   "entry": {
     "commands": "commands.json",
     "prompts": "prompts.md"
   },
-  "supports": ["ssh", "telnet", "local_shell"],
-  "permissions": ["read_terminal", "suggest_commands", "parse_output"],
+  "supports": [
+    "ssh",
+    "telnet"
+  ],
+  "permissions": [
+    "read_terminal",
+    "suggest_commands",
+    "parse_output"
+  ],
   "safe_by_default": true,
   "ui": {
     "badge_bg": "#2d6a4f",
     "badge_fg": "#ffffff"
-  }
+  },
+  "metadata": {
+    "activation_terms": [
+      "vim",
+      "vi"
+    ]
+  },
+  "stability": "beta",
+  "release_note": "Use deterministic VIM_* helpers after fresh buffer inspection. Raw key recipes are not reliable."
 }

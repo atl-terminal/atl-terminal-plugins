@@ -13,4 +13,4 @@ jobs:
       - name: Validate plugin manifests
         run: perl tools/validate_all.pl
       - name: Run tests
-        run: perl t/validate_plugins.t
+        run: perl -MTest::Harness -e 'runtests sort glob(q(t/*.t))'

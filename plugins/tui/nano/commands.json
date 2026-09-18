@@ -10,8 +10,8 @@
     "NANO_DELETE"
   ],
   "notes": [
-    "nano is modeless, so text inserts directly.",
-    "Wait for screen updates after save prompts.",
-    "Avoid repeating save or exit actions if the screen did not change."
+    "Release status: unstable for full automation. Prefer manual nano for production edits.",
+    "Prefer high-level nano actions over raw Ctrl key recipes.",
+    "After save prompts, wait for screen refresh before sending the next action."
   ]
 }

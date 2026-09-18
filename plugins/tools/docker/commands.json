@@ -1,0 +1,14 @@
+{
+  "read_only": [
+    "command -v docker && command -v timeout",
+    "timeout 15s docker --version",
+    "timeout 15s docker ps -a --format 'table {{.Names}}\\t{{.Status}}\\t{{.Image}}' | head -c 32768"
+  ],
+  "notes": [
+    "Require a confirmed Linux shell and Docker CLI before using these POSIX commands.",
+    "Check the active Docker context before assuming a daemon is local. Access denied is not evidence of stopped containers.",
+    "For a confirmed container, use timeout 15s docker logs --since 15m --tail 100 --timestamps CONTAINER 2>&1 | head -c 32768, with the observed container name safely shell-quoted. Never use --follow or an unbounded history scan.",
+    "Do not dump docker inspect environment fields or compose config: they can contain credentials.",
+    "Inspection does not authorize exec, restart, stop, rm, prune, pull, or compose up. Ask before any change."
+  ]
+}

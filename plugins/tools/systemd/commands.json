@@ -1,0 +1,13 @@
+{
+  "read_only": [
+    "command -v systemctl && command -v journalctl && command -v timeout",
+    "timeout 15s systemctl --no-pager --plain --failed --type=service | head -c 32768"
+  ],
+  "notes": [
+    "Require a Linux host actually running systemd; an installed CLI alone does not prove the system bus is available.",
+    "After the user identifies a unit, read its state with systemctl --no-pager show --property=Id,ActiveState,SubState,Result,ExecMainStatus UNIT.",
+    "Read finite logs with timeout 15s journalctl --no-pager -u UNIT -n 100 --since '15 minutes ago' -o short-iso 2>&1 | head -c 32768; quote the confirmed unit safely.",
+    "A failed state is not a root cause. Inspect exit status and timestamps before concluding.",
+    "Never restart, stop, enable, disable, daemon-reload, edit units, or vacuum the journal without explicit authorization. Logs may contain secrets; redact before sharing."
+  ]
+}

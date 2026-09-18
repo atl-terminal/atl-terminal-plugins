@@ -3,18 +3,31 @@
   "name": "Nmap",
   "type": "tool",
   "api_version": "1.0",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Safe network discovery command suggestions and output interpretation hints.",
   "logo": "logo.txt",
   "entry": {
     "commands": "commands.json",
     "prompts": "prompts.md"
   },
-  "supports": ["linux_shell"],
-  "permissions": ["read_terminal", "suggest_commands", "parse_output"],
+  "supports": [
+    "ssh",
+    "telnet"
+  ],
+  "permissions": [
+    "read_terminal",
+    "suggest_commands",
+    "parse_output"
+  ],
   "safe_by_default": true,
   "ui": {
     "badge_bg": "#0f766e",
     "badge_fg": "#ffffff"
-  }
+  },
+  "metadata": {
+    "activation_terms": [
+      "nmap"
+    ]
+  },
+  "stability": "beta"
 }

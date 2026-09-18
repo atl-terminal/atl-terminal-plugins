@@ -16,6 +16,7 @@
     "VIM_REDO"
   ],
   "notes": [
+    "Release status: beta. Use deterministic VIM_* actions, not raw KEY/TEXT editing.",
     "Prefer line-aware Vim actions over raw cursor movement.",
     "Before line-number edits, inspect or infer the current buffer lines.",
     "Avoid duplicate appends and repeated buffer replacement."

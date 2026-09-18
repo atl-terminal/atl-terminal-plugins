@@ -1,13 +1,14 @@
 {
   "read_only": [
-    "nmap --version",
-    "nmap -sn <target>",
-    "nmap -sV --version-light <target>"
+    "nmap --version"
   ],
   "confirm_required": [
-    "nmap -A <target>",
-    "nmap -O <target>",
-    "nmap -p- <target>",
-    "nmap --script vuln <target>"
+    "nmap -sn -n --max-rate 10 --host-timeout 10s TARGET"
+  ],
+  "notes": [
+    "Confirm explicit target scope and authorization before any network scan, even discovery.",
+    "TARGET is a placeholder: never run it literally or infer an expanded network range.",
+    "Wrap an authorized scan in a finite timeout and cap output bytes. Prefer a small target set; report incomplete results honestly.",
+    "Do not use vulnerability scripts, aggressive scanning, all-port scans, or output-file flags by default."
   ]
 }

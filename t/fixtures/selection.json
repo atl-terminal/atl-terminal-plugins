@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Docker SSH request",
+    "request": "inspect docker containers, do not change anything",
+    "protocol": "ssh",
+    "ids": [
+      "atl.tool.docker"
+    ],
+    "contains": "--tail 100"
+  },
+  {
+    "name": "Git inspection",
+    "request": "inspect git status",
+    "protocol": "ssh",
+    "ids": [
+      "atl.tool.git"
+    ],
+    "contains": "--no-textconv"
+  },
+  {
+    "name": "Service journal",
+    "request": "systemd journalctl diagnostics",
+    "protocol": "ssh",
+    "ids": [
+      "atl.tool.systemd"
+    ],
+    "contains": "--no-pager"
+  },
+  {
+    "name": "Cisco is separate",
+    "request": "check cisco interfaces",
+    "protocol": "telnet",
+    "ids": [
+      "atl.device.cisco_ios"
+    ],
+    "contains": "show version"
+  },
+  {
+    "name": "Vim stays beta",
+    "request": "edit with vim",
+    "protocol": "ssh",
+    "ids": [
+      "atl.tui.vim"
+    ],
+    "contains": "VIM_APPEND"
+  },
+  {
+    "name": "Nano is unstable",
+    "request": "nano save issue",
+    "protocol": "ssh",
+    "ids": [
+      "atl.tui.nano"
+    ],
+    "contains": "unstable"
+  },
+  {
+    "name": "Current code actions",
+    "request": "inspect source code",
+    "protocol": "ssh",
+    "ids": [
+      "atl.code.inspect"
+    ],
+    "contains": "CODE_SEARCH"
+  },
+  {
+    "name": "No accidental substring",
+    "request": "commitment to navigate a dockerfileless preview",
+    "protocol": "ssh",
+    "ids": []
+  },
+  {
+    "name": "No unsupported local transport",
+    "request": "docker",
+    "protocol": "local",
+    "ids": []
+  },
+  {
+    "name": "Unrelated task",
+    "request": "what time is it",
+    "protocol": "ssh",
+    "ids": []
+  }
+]
